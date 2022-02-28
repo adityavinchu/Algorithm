@@ -4,6 +4,15 @@ namespace Algorithms
 {
     public class PrimeNumber
     {
+        public bool Pallindrome(string s)
+        {
+            string curr = "";
+            for (int i = s.Length - 1; i >= 0; i--)
+                curr += s[i];
+            if (s.CompareTo(curr) == 0) return true;
+            else
+                return false;
+        }
         public bool PrimeCheck(int n)
         {
             if (n == 0 || n == 1) return false;
@@ -15,15 +24,20 @@ namespace Algorithms
         }
         public void PrintPrime(int n)
         {
+            Console.Write("The Pallindromic Prime no are :");
             for (int i = 0; i <= n; i++)
             {
                 if (PrimeCheck(i))
                 {
-                    Console.Write(i + " ");
+                    if (Pallindrome(Convert.ToString(i)))
+                    {
+                        Console.Write(i + " ");
+                    }
                 }
             }
-            Console.ReadLine(); 
-            Console.WriteLine();
+            Console.ReadLine();
+
         }
+        
     }
 }
