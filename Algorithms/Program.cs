@@ -42,13 +42,18 @@ namespace Algorithms
             //    Console.ReadLine();
             //}
 
-            InsertionSort insertionSort = new InsertionSort();
-            insertionSort.Sort(list);
-            for(int i = 0; i < list.Length; i++)
+            //InsertionSort insertionSort = new InsertionSort();
+            //insertionSort.Sort(list);
+
+
+            BubbleSort bubbleSort = new BubbleSort();
+            bubbleSort.Sort(list);
+            for (int i = 0; i < list.Length; i++)
             {
-                Console.WriteLine(list[i] +" ");
+                Console.WriteLine(list[i] + " ");
             }
             Console.ReadLine();
+
         }
     }
 }
